@@ -1,0 +1,11 @@
+/*Reset CSS*/
+* {
+  margin: 0px;
+  padding: 0px;
+
+  border: none;
+
+  font: inherit;
+
+  box-sizing: border-box;
+}
