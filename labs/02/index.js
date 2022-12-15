@@ -46,7 +46,15 @@ function showTableData() {
 }
 
 function populatePaginationDropdown() {
-  const numberOfPage = numberOfRecords / pageSize;
+  const numberOfPage = Math.ceil(numberOfRecords / pageSize);
+
+  if (startIndex > numberOfRecords - 1) {
+    startIndex = 0;
+  }
+
+  const currentlySelectedvalue = paginationDropdown.value
+    ? Number.parseInt(paginationDropdown.value)
+    : 0;
 
   paginationDropdown.innerHTML = "";
 
@@ -55,6 +63,10 @@ function populatePaginationDropdown() {
 
     optionElement.value = index + 1;
     optionElement.innerText = `Page ${index + 1}`;
+
+    if (currentlySelectedvalue === index + 1) {
+      optionElement.selected = true;
+    }
 
     paginationDropdown.append(optionElement);
   }
@@ -80,9 +92,9 @@ function searchTextBoxKeyPress(event) {
 
   numberOfRecords = filteredTeamMembersData.length;
 
-  showTableData();
-
   populatePaginationDropdown();
+
+  showTableData();
 }
 
 function getInitialData() {
@@ -111,8 +123,7 @@ function getInitialData() {
   const request = new XMLHttpRequest();
 
   request.onreadystatechange = () => {
-    if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
-      console.log(request.response);
+    if (request.readyState === 4 && request.status === 200) {
       teamMembersData = JSON.parse(request.response);
 
       numberOfRecords = teamMembersData.length;
@@ -128,6 +139,5 @@ function getInitialData() {
   request.open("GET", URL);
 
   request.send();
-
   */
 }
