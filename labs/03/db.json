@@ -1,0 +1,34 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "prod one",
+      "desc": "prod desc one",
+      "qty": 100
+    },
+    {
+      "id": "2",
+      "name": "prod one",
+      "desc": "prod desc one",
+      "qty": 100
+    },
+    {
+      "id": "3",
+      "name": "prod one",
+      "desc": "prod desc one",
+      "qty": 100
+    },
+    {
+      "name": "test prod",
+      "desc": "test prod desc",
+      "qty": "55",
+      "id": "Poh6slV"
+    },
+    {
+      "name": "test prod 7",
+      "desc": "seven desc",
+      "qty": "77",
+      "id": "sGoh_sz"
+    }
+  ]
+}
