@@ -1,0 +1,101 @@
+body {
+  min-height: 100vh;
+
+  font-size: 16px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  display: grid;
+  place-items: center;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  font-size: 16px;
+  padding: 4px 10px;
+
+  border-radius: 5px;
+}
+
+body main {
+  background-color: powderblue;
+
+  padding: 32px 24px;
+  border-radius: 13px;
+}
+
+body main form {
+  width: 350px;
+}
+
+h1 {
+  font-size: 24px;
+  text-align: center;
+
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.form-field {
+  margin-top: 16px;
+
+  display: grid;
+}
+
+.form-field label {
+  margin-bottom: 3px;
+  font-weight: 500;
+
+  font-size: 16px;
+}
+
+.action-items {
+  display: grid;
+  place-items: center;
+}
+
+.action-items button {
+  margin-top: 8px;
+
+  padding: 8px 16px;
+
+  border-radius: 5px;
+
+  background-color: #4f1f19;
+  color: white;
+  font-weight: bold;
+}
+
+textarea {
+  height: 100px;
+}
+
+em {
+  color: grey;
+  font-style: italic;
+
+  font-weight: 400;
+  font-size: 14px;
+}
+
+/* Error Classes */
+.field-error {
+  font-weight: 500;
+
+  font-size: 14px;
+  color: orangered;
+
+  display: none;
+}
+
+.form-error {
+  font-weight: 500;
+
+  font-size: 18px;
+  color: orangered;
+
+  text-align: center;
+
+  display: none;
+}

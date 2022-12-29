@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handling Forms</title>
+
+    <link rel="stylesheet" href="./static/css/reset.css" />
+    <link rel="stylesheet" href="./static/css/index.css" />
+
+    <script src="./static/js/index.js" type="module"></script>
+  </head>
+  <body>
+    <main>
+      <form action="">
+        <h1>Sign Up Form</h1>
+
+        <div class="form-field">
+          <label for="username">Username</label>
+          <input type="text" id="username" maxlength="20" />
+        </div>
+
+        <div class="field-error" id="username-error">some text</div>
+
+        <div class="form-field">
+          <label for="password">Password</label>
+          <input type="password" id="password" maxlength="12" />
+        </div>
+
+        <div class="field-error" id="password-error"></div>
+
+        <div class="form-field">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" maxlength="12" />
+        </div>
+
+        <div class="field-error" id="confirm-password-error"></div>
+
+        <div class="form-field">
+          <label for="country">Country</label>
+          <select id="country">
+            <option value="dummy">Select Country</option>
+          </select>
+        </div>
+
+        <div class="field-error" id="country-error"></div>
+
+        <div class="form-field">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" maxlength="50" />
+        </div>
+
+        <div class="field-error" id="fullname-error"></div>
+
+        <div class="form-field">
+          <label for="fav-color"
+            >What is your favourite color? <em>(Optional)</em></label
+          >
+          <input type="text" id="fav-color" maxlength="15" />
+        </div>
+
+        <div class="form-field" id="passport-div">
+          <label>Do you have Passport?</label>
+
+          <div>
+            <input
+              type="radio"
+              id="passport-yes"
+              name="passport"
+              value="true"
+            />
+            <label for="passport-yes">Yes</label>
+          </div>
+
+          <div>
+            <input
+              type="radio"
+              id="passport-no"
+              name="passport"
+              value="false"
+            />
+            <label for="passport-no">No</label>
+          </div>
+        </div>
+
+        <div class="field-error" id="passport-error"></div>
+
+        <div class="form-field">
+          <label for="address">Address</label>
+          <textarea name="" id="address" maxlength="250"></textarea>
+        </div>
+
+        <div class="field-error" id="address-error"></div>
+
+        <div class="form-field">
+          <div></div>
+          <div>
+            <input type="checkbox" id="send-newsletter" />
+            <label for="send-newsletter">Send me Monthly Newsletter</label>
+          </div>
+        </div>
+
+        <div class="form-field">
+          <div></div>
+          <div>
+            <input type="checkbox" id="accept_tnc" />
+            <label for="accept_tnc"
+              >I have read and accept the Terms &amp; Conditions</label
+            >
+          </div>
+        </div>
+
+        <div class="field-error" id="accept_tnc-error"></div>
+
+        <div class="form-error" id="form-error-div">sdssdsd</div>
+
+        <div class="action-items">
+          <input
+            type="text"
+            id="form-validation-status"
+            style="display: none"
+          />
+          <button id="sign-up" type="button">Sign Up</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>
