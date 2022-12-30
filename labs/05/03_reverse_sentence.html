@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reverse every word of a string</title>
+
+    <script>
+      const str = "Welcome to Skill Academy!";
+
+      let reverseStr = "";
+
+      function reverseStringValue(s, separator) {
+        return s.split(separator).reverse().join(separator);
+      }
+
+      let tempStr = reverseStringValue(str, "");
+
+      reverseStr = reverseStringValue(tempStr, " ");
+
+      /*
+      let strArray = str.split(" ");
+      let reverseStrArray = [];
+
+      for (let index = 0; index < strArray.length; index++) {
+        const element = strArray[index];
+
+        reverseStrArray.push(reverseStringValue(element));
+      }
+
+      reverseStr =  reverseStrArray.join(" ")
+      */
+
+      console.log(reverseStr);
+    </script>
+  </head>
+  <body></body>
+</html>
+
+<!-- 
+Welcome to Skill Academy! -- emocleW ot llikS !ymedacA   
+ -->

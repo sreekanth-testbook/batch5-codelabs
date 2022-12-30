@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Closure</title>
+
+    <script>
+      function counter(step) {
+        let count = 0;
+
+        return function () {
+          count = count + step;
+
+          console.log(count);
+        };
+      }
+
+      const step5Counter = counter(5);
+
+      step5Counter();
+      step5Counter();
+      step5Counter();
+      step5Counter();
+
+      console.log("====================");
+
+      const step10Counter = counter(10);
+
+      step10Counter();
+      step10Counter();
+      step10Counter();
+    </script>
+  </head>
+  <body></body>
+</html>

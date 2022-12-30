@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Call / Apply / Bind</title>
+
+    <script>
+      // Method borrowing using call/apply/bind
+
+      const person1 = {
+        firstName: "Virat",
+        lastName: "Kohli",
+        sayHello(greeting, title) {
+          console.log(
+            `${greeting} ${title} ${this.firstName} ${this.lastName}`
+          );
+        },
+      };
+
+      person1.sayHello("Hello", "Mr.");
+
+      const person2 = {
+        firstName: "Rishabh",
+        lastName: "Pant",
+      };
+
+      console.log("===========CALL==========");
+
+      person1.sayHello.call(person2, "Good Morning", "Sir");
+
+      const person3 = {};
+
+      person1.sayHello.call(person3, "Good Morning", "Sir");
+
+      console.log("==========APPLY===========");
+      const parameters = ["Good Morning", "Sir"];
+      person1.sayHello.apply(person2, parameters);
+
+      person1.sayHello.apply(person3, ["Good Morning", "Sir"]);
+
+      console.log("==========BIND===========");
+
+      const person2SayHello = person1.sayHello.bind(person2);
+
+      person2SayHello("Good Morning", "Sir");
+
+      const person3SayHello = person1.sayHello.bind(person3);
+      person3SayHello("Good Morning", "Sir");
+    </script>
+  </head>
+  <body></body>
+</html>

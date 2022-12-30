@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array.reduce</title>
+
+    <script>
+      const myArray = [5, 4, 2, 1, 3];
+
+      const reducedValue = myArray.reduce(reducerFunction, {
+        sum: 0,
+        product: 1,
+        min: Infinity,
+        max: -Infinity,
+      });
+
+      function reducerFunction(accumulator, currentValue, i) {
+        return {
+          sum: accumulator.sum + currentValue,
+
+          product: accumulator.product * currentValue,
+
+          min: accumulator.min < currentValue ? accumulator.min : currentValue,
+
+          max: accumulator.max > currentValue ? accumulator.max : currentValue,
+        };
+      }
+
+      console.log(reducedValue);
+    </script>
+  </head>
+  <body></body>
+</html>
+
+<!-- 
+[5, 4, 2, 1, 3]
+
+sum
+product
+min
+max
+ -->
